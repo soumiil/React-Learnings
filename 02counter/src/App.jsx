@@ -1,28 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  let counter = 5;
+  let [counter, setCounter] = useState(0);
+  /* first one is variable, and the second is function which is responsible for updating the first one */
+
 
   const addValue = () => {
-    console.log("Clicked", counter);
-    counter = counter + 1;
-    return counter;
-  }
+    setCounter(counter + 1);
+  };
+
+  const removeValue = () => {
+    setCounter(counter - 1);
+  };
 
   return (
     <>
       <h1>Chai aur React</h1>
       <h2>Counter value: {counter}</h2>
 
-      <button onClick={addValue}>Add Value {counter}</button>
+      <button onClick={addValue}>Add value {counter}</button>
       <br />
-      <button>Remove Value {counter}</button>
+      <br />
+      <button onClick={removeValue}>Remove value {counter}</button>
       <p>Footer: {counter}</p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
