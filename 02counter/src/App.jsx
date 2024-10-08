@@ -17,14 +17,12 @@ function App() {
 
   return (
     <>
-      <h1>Chai aur React</h1>
-      <h2>Counter value: {counter}</h2>
+      <h1>{counter}</h1>
 
-      <button onClick={addValue}>Add value {counter}</button>
+      <button onClick={addValue}>Add value: {counter}</button>
       <br />
       <br />
-      <button onClick={removeValue}>Remove value {counter}</button>
-      <p>Footer: {counter}</p>
+      <button onClick={removeValue}>Remove value: {counter}</button>
     </>
   );
 }
