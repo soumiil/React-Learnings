@@ -5,7 +5,6 @@ function App() {
   let [counter, setCounter] = useState(0);
   /* first one is variable, and the second is function which is responsible for updating the first one */
 
-
   const addValue = () => {
     if(counter !== 20)
     setCounter(counter + 1);
