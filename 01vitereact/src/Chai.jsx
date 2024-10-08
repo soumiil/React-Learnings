@@ -1,8 +1,11 @@
-// We made a component and then exported it
 function Chai() {
-    return (
-        <h3>Chai is ready!</h3>
-    )
+  const username = "Soumil";
+  return (
+    <>
+      <h1>Hello {username}</h1>
+      <p>Hope you're doing well</p>
+    </>
+  );
 }
 
-export default Chai
+export default Chai;
