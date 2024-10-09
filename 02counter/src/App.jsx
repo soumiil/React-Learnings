@@ -6,13 +6,16 @@ function App() {
   /* first one is variable, and the second is function which is responsible for updating the first one */
 
   const addValue = () => {
-    if(counter !== 20)
-    setCounter(counter + 1);
+    if (counter !== 20) {
+      setCounter(counter + 1);
+      setCounter(counter + 1);
+      setCounter(counter + 1);
+      setCounter(counter + 1);
+    }
   };
 
   const removeValue = () => {
-    if(counter !== 0)
-    setCounter(counter - 1);
+    if (counter !== 0) setCounter(counter - 1);
   };
 
   return (
