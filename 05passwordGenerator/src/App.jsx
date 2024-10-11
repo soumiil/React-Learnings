@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 
-function App() {
+const App = () => {
   const [length, setLength] = useState(8);
   const [numberAllowed, setNumberAllowed] = useState(false);
   const [charAllowed, setCharAllowed] = useState(false);
@@ -38,10 +38,10 @@ function App() {
 
   return (
     <>
-      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-500 bg-gray-800 font-mono">
-        <h1 className="text-white text-center my-3 font-bold">Password Generator</h1>
+      <div className="w-96 mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-500 bg-gray-800 font-mono">
+        <h1 className="text-white text-center my-3 font-bold text-3xl">Password Generator</h1>
 
-        <div className="flex shadow rounded-lg overflow-hidden mb-4">
+        <div className="flex shadow rounded-lg overflow-hidden mb-4 h-12 text-2xl">
           <input
             type="text"
             value={password}
@@ -58,8 +58,8 @@ function App() {
           </button>
         </div>
 
-        <div className="flex text-sm gap-x-2">
-          <div className="flex items-center gap-x-1">
+        <div className="flex flex-wrap text-sm gap-x-10 text-2xl">
+          <div className="flex flex-wrap items-center gap-x-1">
             <input
               type="range"
               min={1}
