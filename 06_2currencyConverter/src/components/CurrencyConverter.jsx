@@ -5,7 +5,7 @@ function CurrencyConverter() {
   useEffect(() => {
     fetchCurrencies();
   }, []);
-  
+
   const [currencies, setCurrencies] = useState([]);
   const [amount, setAmount] = useState(0);
   const [fromCurrency, setFromCurrency] = useState("USD");
@@ -74,7 +74,7 @@ function CurrencyConverter() {
             className="px-2 py-1 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
             SWAP
-          </button>
+          </button> 
         </div>
         <CurrencyDropdown
           currencies={currencies}
