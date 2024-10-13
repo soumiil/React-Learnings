@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Dropdown from "./CurrencyDropdown";
+import CurrencyDropdown from "./CurrencyDropdown";
 
 function CurrencyConverter() {
   const [currencies, setCurrencies] = useState([]);
@@ -18,10 +18,6 @@ function CurrencyConverter() {
       })
       .catch((error) => console.log(`Error fetching: ${error}`));
   }
-
-  useEffect(() => {
-    
-  })
 
   // conversion api -> https://api.frankfurter.app/latest?amount=1&from=USD&to=INR
   async function convertCurrency() {
@@ -45,7 +41,7 @@ function CurrencyConverter() {
   }
 
   useEffect(() => {
-    convertCurrency()
+    fetchCurrencies()
   }, []);
 
   function swapCurrencies() {
