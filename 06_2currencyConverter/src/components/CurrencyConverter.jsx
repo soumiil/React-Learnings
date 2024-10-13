@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Dropdown from "./Dropdown";
+import Dropdown from "./CurrencyDropdown";
 
 function CurrencyConverter() {
   const [currencies, setCurrencies] = useState([]);
@@ -19,7 +19,9 @@ function CurrencyConverter() {
       .catch((error) => console.log(`Error fetching: ${error}`));
   }
 
-  fetchCurrencies();
+  useEffect(() => {
+    
+  })
 
   // conversion api -> https://api.frankfurter.app/latest?amount=1&from=USD&to=INR
   async function convertCurrency() {
@@ -60,7 +62,7 @@ function CurrencyConverter() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
-        <Dropdown
+        <CurrencyDropdown
           currencies={currencies}
           title="From:"
           currency={fromCurrency}
@@ -69,7 +71,7 @@ function CurrencyConverter() {
         <div className="flex justify-center -mb-5 sm:-mb-0">
           <button onClick={swapCurrencies}>SWAP</button>
         </div>
-        <Dropdown
+        <CurrencyDropdown
           currencies={currencies}
           title="To:"
           currency={toCurrency}
