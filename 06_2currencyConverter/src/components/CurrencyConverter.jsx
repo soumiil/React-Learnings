@@ -65,7 +65,7 @@ function CurrencyConverter() {
           setCurrency={setFromCurrency}
         />
         <div className="flex justify-center -mb-5 sm:-mb-0">
-          <button onClick={swapCurrencies}>SWAP</button>
+          <button onClick={swapCurrencies} className="px-2 py-1 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">SWAP</button>
         </div>
         <CurrencyDropdown
           currencies={currencies}
