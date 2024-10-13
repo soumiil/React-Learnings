@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import CurrencyDropdown from "./CurrencyDropdown";
 
 function CurrencyConverter() {
+  useEffect(() => {
+    fetchCurrencies();
+  }, []);
+  
   const [currencies, setCurrencies] = useState([]);
   const [amount, setAmount] = useState(0);
   const [fromCurrency, setFromCurrency] = useState("USD");
@@ -40,9 +44,9 @@ function CurrencyConverter() {
       });
   }
 
-  useEffect(() => {
-    fetchCurrencies();
-  }, []);
+  // useEffect(() => {
+  //   fetchCurrencies();
+  // }, []);
 
   function swapCurrencies() {
     setFromCurrency(toCurrency);
